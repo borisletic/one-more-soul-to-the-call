@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   answer:
-    if: contains(github.event.issue.labels.*.name, 'call')
+    if: contains(github.event.issue.labels.*.name, 'call') || startsWith(github.event.issue.title, 'A soul answers the call')
     runs-on: ubuntu-latest
     env:
       ISSUE_BODY: ${{ github.event.issue.body }}
