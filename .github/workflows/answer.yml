@@ -1,0 +1,48 @@
+name: answer-the-call
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+# One soul at a time, so numbers never collide.
+concurrency:
+  group: souls
+  cancel-in-progress: false
+
+jobs:
+  answer:
+    if: contains(github.event.issue.labels.*.name, 'call')
+    runs-on: ubuntu-latest
+    env:
+      ISSUE_BODY: ${{ github.event.issue.body }}
+      ISSUE_USER: ${{ github.event.issue.user.login }}
+      ISSUE_USER_ID: ${{ github.event.issue.user.id }}
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+      REPO: ${{ github.repository }}
+      COMMENT_FILE: /tmp/comment.md
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Process the soul
+        id: p
+        run: python scripts/answer.py
+      - name: Commit as the soul's author
+        if: steps.p.outputs.status == 'ok'
+        run: |
+          git config user.name "the-call[bot]"
+          git config user.email "the-call@users.noreply.github.com"
+          git add souls README.md
+          git commit -m "soul #${{ steps.p.outputs.id }} answers the call" \
+            --author="${ISSUE_USER} <${ISSUE_USER_ID}+${ISSUE_USER}@users.noreply.github.com>"
+          git push
+      - name: Reply and close
+        if: always() && steps.p.outputs.status != ''
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body-file "$COMMENT_FILE"
+          gh issue close "$ISSUE_NUMBER" --reason completed

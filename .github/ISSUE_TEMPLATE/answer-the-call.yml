@@ -1,0 +1,35 @@
+name: Answer the call
+description: Add one more soul. Takes 10 seconds.
+title: "A soul answers the call"
+labels: ["call"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## One more soul to the call.
+        Look at the soul you are answering. Change it a little: one word, one symbol, one twist. Make it yours.
+        When you submit, a bot commits your soul to the repo **under your name**.
+  - type: input
+    id: parent
+    attributes:
+      label: Answering soul #
+      description: Pre-filled with the newest soul. Leave it, or pick any number.
+      placeholder: "0"
+    validations:
+      required: false
+  - type: input
+    id: soul
+    attributes:
+      label: Your soul
+      description: A word or short phrase (max 40 characters). No links.
+      placeholder: "hello? ... is anyone there"
+    validations:
+      required: true
+  - type: input
+    id: glyph
+    attributes:
+      label: Glyph
+      description: One emoji or symbol that is you.
+      placeholder: "👁"
+    validations:
+      required: false
