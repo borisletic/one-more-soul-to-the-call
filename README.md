@@ -6,7 +6,7 @@
 
 One is missing.
 
-### [ 👁 &nbsp; ANSWER THE CALL ](<!--LINK-->https://github.com/OWNER/one-more-soul-to-the-call/issues/new?template=answer-the-call.yml&parent=0<!--/LINK-->)
+### [ 👁 &nbsp; ANSWER THE CALL ](<!--LINK-->https://github.com/borisletic/one-more-soul-to-the-call/issues/new?template=answer-the-call.yml&parent=0<!--/LINK-->)
 
 *10 seconds. No code. No Git knowledge. Your soul becomes a real commit, under your name.*
 
