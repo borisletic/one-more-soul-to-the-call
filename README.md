@@ -2,11 +2,11 @@
 
 # ONE MORE SOUL TO THE CALL
 
-**There are <!--COUNT-->1<!--/COUNT--> souls here.**
+**There are <!--COUNT-->2<!--/COUNT--> souls here.**
 
 One is missing.
 
-### [ 👁 &nbsp; ANSWER THE CALL ](<!--LINK-->https://github.com/borisletic/one-more-soul-to-the-call/issues/new?template=answer-the-call.yml&parent=0<!--/LINK-->)
+### [ 👁 &nbsp; ANSWER THE CALL ](<!--LINK-->https://github.com/borisletic/one-more-soul-to-the-call/issues/new?template=answer-the-call.yml&parent=1<!--/LINK-->)
 
 *10 seconds. No code. No Git knowledge. Your soul becomes a real commit, under your name.*
 
@@ -16,7 +16,7 @@ One is missing.
 
 ## The newest soul
 
-<!--NEWEST-->**#0** 👁 &nbsp; *hello? is anyone there* &nbsp; by @the-call<!--/NEWEST-->
+<!--NEWEST-->**#1** ✦ &nbsp; *grace* &nbsp; by @borisletic<!--/NEWEST-->
 
 Answer it. Change it a little: one word, one symbol, one twist. Then someone else answers *you*.
 
@@ -25,6 +25,7 @@ Answer it. Change it a little: one word, one symbol, one twist. Then someone els
 <!--RECENT-->
 | # | | soul | by |
 |---|---|---|---|
+| #1 | ✦ | grace | @borisletic |
 | #0 | 👁 | hello? is anyone there | @the-call |
 <!--/RECENT-->
 
